@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/global/Navbar';
 import Main from './layouts/Main';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Features from './components/Features';
-import About from './components/About';
+import About from './components/Banner';
 
 /**
  * App Component
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Main sections={sections} />
+        <Main sections={sections} />
       <Footer />
     </div>
   );

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Section from '../../components/Section';
-
+import Banner from '../../components/Banner';
+import Features from '../../components/Features';
+import Community from '../../components/Community';
 /**
  * Main Layout Component
  * Container for all landing page sections
@@ -11,17 +12,9 @@ import Section from '../../components/Section';
 const Main = ({ sections = [] }) => {
   return (
     <main className="min-h-screen">
-      {sections.map((section, index) => (
-        <Section
-          key={section.id || `section-${index}`}
-          id={section.id || `section-${index}`}
-          title={section.title}
-          subtitle={section.subtitle}
-          bgColor={section.bgColor || 'bg-white'}
-        >
-          {section.content}
-        </Section>
-      ))}
+        <Banner />
+        <Features/>
+        <Community/>
     </main>
   );
 };

@@ -1,47 +1,71 @@
 import React from 'react';
-
+import { SectionContent } from '../global';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /**
  * Features Section Component
  * Displays key features of the platform
  */
 const Features = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      <div className="text-center p-6 md:p-8 rounded-lg bg-gray-50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-        <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-          <svg className="w-8 h-8 md:w-10 md:h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+    return (
+        <div className='relative'>
+            <img className='object-cover z-1 w-full h-[418px] absolute' src="../assets/images/features/waves.png" alt="" />
+            <div className='relative flex-col lg:p-[100px_30px] p-[20px] z-50 xl:container m-auto lg:flex block w-full gap-[45px] justify-between'>
+                <div className='relative'>
+                    <img className='object-contain z-1 float-animation bottom-30 w-auto absolute' src="../assets/images/features/Vector-1.png" alt="" />
+                    <img className='object-contain z-1 float-animation left-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-2.png" alt="" />
+                    <img className='object-contain z-1 float-animation right-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-3.png" alt="" />
+                    <img className='object-contain z-1 float-animation right-[0%] bottom-30 w-auto absolute' src="../assets/images/features/Vector-4.png" alt="" />
+                    <div className="m-auto w-full max-w-[680px] text-center [&_h1]:text-[40px]! [&_h1]:leading-[55px]! [&_p]:text-[20px]! [&_p]:leading-[32px]!">
+                        <span className="tagline mb-[20px]">
+                            <FontAwesomeIcon icon="fa-solid fa-music" />
+                            What Sets Us Apart
+                        </span>
+                        <div className="banner-tittle">
+                            <h1>Why Families Choose <br></br> <span>Freeport</span> Music Studio</h1>
+                            <p className="break-keep">
+                                Since 2017, we've been committed to nurturing confident musicians through:
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div className='grid grid-cols-3 gap-[20px]'>
+                    <div className='rounded-[20px] overflow-hidden'>
+                        <div className='p-[46px_10px] h-[364px]  flex items-center justify-center  bg-[radial-gradient(circle,#F7BCA8_0%,#F7BBA7_1%,#E45627_100%)]'>
+                            <img className='w-full object-cover max-h-[276px]' src="../assets/images/features/blo2-01.png" alt="" />
+                        </div>
+                        <div className='bg-[#f2fafc] p-[16px_28px]'>
+                            <h2 className='font-semibold text-2xl text-center text-dark'>Highly Trained Teachers</h2>
+                            <p className='mt-[7px] font-normal text-[16px] leading-[22px] text-center text-dark'>
+                                Our passionate instructors bring years of experience, encouraging both teacher-guided and student-led learning.
+                            </p>
+                        </div>
+                    </div>
+                     <div className='rounded-[20px] overflow-hidden'>
+                        <div className='p-[0_10px] overflow-hidden h-[364px]  flex items-center justify-center  bg-[radial-gradient(circle,#55B5EC_0%,#BBF6FF_100%)]'>
+                            <img className='w-full object-scale-down object-scale-down' src="../assets/images/features/blo2-1.png" alt="" />
+                        </div>
+                        <div className='bg-[#f2fafc] p-[16px_28px]'>
+                            <h2 className='font-semibold text-2xl text-center text-dark'>Performance Opportunities</h2>
+                            <p className='mt-[7px] font-normal text-[16px] leading-[22px] text-center text-dark'>
+                                From recitals to festivals and outreach events, students gain confidence and stage experience throughout the year.
+                            </p>
+                        </div>
+                    </div>
+                     <div className='rounded-[20px] overflow-hidden'>
+                        <div className='p-[0_10px] overflow-hidden h-[364px] flex items-center justify-center bg-gradient-to-r from-[#FFA789] to-[#E45627]'>
+                            <img className='w-[281px] h-[277px] object-cover ' src="../assets/images/features/blo2-3.png" alt="" />
+                        </div>
+                        <div className='bg-[#f2fafc] p-[16px_28px]'>
+                            <h2 className='font-semibold text-2xl text-center text-dark'>Performance Opportunities</h2>
+                            <p className='mt-[7px] font-normal text-[16px] leading-[22px] text-center text-dark'>
+                                From recitals to festivals and outreach events, students gain confidence and stage experience throughout the year.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">Fast Performance</h3>
-        <p className="text-gray-600 leading-relaxed">
-          Lightning-fast performance optimized for the best user experience.
-        </p>
-      </div>
-      <div className="text-center p-6 md:p-8 rounded-lg bg-gray-50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-        <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-          <svg className="w-8 h-8 md:w-10 md:h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-        </div>
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">Secure</h3>
-        <p className="text-gray-600 leading-relaxed">
-          Enterprise-grade security to protect your data and privacy.
-        </p>
-      </div>
-      <div className="text-center p-6 md:p-8 rounded-lg bg-gray-50 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-        <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-          <svg className="w-8 h-8 md:w-10 md:h-10 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-          </svg>
-        </div>
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">User Friendly</h3>
-        <p className="text-gray-600 leading-relaxed">
-          Intuitive interface designed with user experience in mind.
-        </p>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Features;

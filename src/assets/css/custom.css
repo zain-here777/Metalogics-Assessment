@@ -1,3 +1,22 @@
+@import "tailwindcss";
+@theme {
+  --font-eb-garamond: "EB Garamond", serif;
+  --font-source-sans-pro: "Source Sans Pro", sans-serif;
+  --font-bs: "Bahnschrift";
+  
+  --color-primary: #3b82f6;
+  --color-dark: #282828;
+  --color-secondary: #e45627;
+  --color-accent: #10b981;
+  --color-text-primary: #231F20;
+  --color-text-secondary: #6b7280;
+  --color-text-light: #656565;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  
+  --color-tagline-bg: #55becf;
+}
+
 /* ============================================
    CUSTOM CSS - Custom Styles
    ============================================
@@ -12,3 +31,137 @@
 } */
 
 /* Add your custom CSS here */
+
+/* Base styles */
+
+body {
+  font-family: var(--font-source-sans-pro), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* ============================================
+   CUSTOM CSS - Add your custom styles below
+   ============================================ */
+
+/* Font utilities for Tailwind */
+.font-eb-garamond {
+  font-family: var(--font-eb-garamond);
+}
+
+.font-source-sans-pro {
+  font-family: var(--font-source-sans-pro);
+}
+
+/* Navigation link separators */
+.nav-link:not(:last-child)::after {
+    content: '';
+    background: #282828;
+    position: absolute;
+    left: calc(100% + 15px);
+    transform: translate(-50%, -50%);
+    height: 9px;
+    width: 1px;
+    top: 50%;
+}
+
+/* Example custom styles */
+.my-custom-class {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Add your custom CSS here */
+@keyframes float-up-down {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-down-up {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+}
+
+.float-animation {
+  animation: float-up-down 3s ease-in-out infinite;
+}
+
+.float-animation-reverse {
+  animation: float-down-up 4s ease-in-out infinite;
+}
+
+.btn-primary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 21px;
+  gap: 10px;
+  font-family: var(--font-bs);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FF7A4E 0%, #E86034 100%);
+  border-radius: 32px;
+  cursor: pointer;
+}
+.btn-secondary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 21px;
+  gap: 10px;
+  font-family: var(--font-bs);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FF7A4E;
+  background: white !important;
+  border: 2px solid var(--color-btn-secondary);
+  border-radius: 32px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn-secondary:hover{
+  background: rgba(255, 122, 78, 0.1) !important;
+}
+.tagline{
+  @apply bg-tagline-bg inline-flex gap-[6px] items-center rounded-lg p-[6px_13px] font-normal text-[15px] leading-[27px] text-white font-bs;
+}
+.banner-tittle h1{
+  @apply
+  font-medium text-[60px] leading-[68px] font-eb-garamond text-text-primary
+}
+.banner-tittle span{
+  @apply
+  text-secondary
+}
+.banner-tittle p{
+  @apply
+  font-normal text-[22px] leading-[32px] text-text-light font-source-sans-pro mt-[20px]
+}
+.has-effect::after{
+  @apply
+  content-[''] pointer-events-none absolute w-[300.16px] h-[300.16px] left-[-104.16px] top-[572.25px] bg-[#f39778d4] blur-[200px]
+}
+.has-effect::before{
+  @apply
+  content-[''] pointer-events-none absolute w-[300.16px] h-[300.16px] right-[-104.16px] top-[0] bg-[#f39778d4] blur-[200px]
+}
+.has-blueeffect::after{
+  @apply
+  content-[''] pointer-events-none absolute w-[300.16px] h-[300.16px] left-[460.33px] top-[-140.36px] bg-[#57bfd069] blur-[200px]
+}
+
