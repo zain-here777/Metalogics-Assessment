@@ -27,11 +27,8 @@ const TouchForm = () => {
     };
 
     return (
-        <section className="bg-[#f0f9fb] py-20 overflow-hidden relative">
-            {/* Background Decorative Blur (Teal) */}
-            <div className="absolute w-[400px] h-[400px] top-[-100px] left-[-100px] bg-[#57bfd033] blur-[100px] rounded-full pointer-events-none" />
-
-            <div className="container mx-auto px-6 relative z-10">
+        <section className="bg-[#E3FBFF] py-20 overflow-hidden">
+            <div className="container mx-auto px-6 relative">
                 {/* Header Section */}
                 <div className="mx-auto max-w-[680px] text-center [&_h1]:text-[30px]! [&_h1]:leading-[40px]! [&_h1]:lg:text-[40px]! [&_h1]:lg:leading-[55px]! [&_h1]:leading-[40px]! [&_p]:text-[20px]! [&_p]:leading-[32px]!">
 
@@ -51,13 +48,19 @@ const TouchForm = () => {
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     {/* Left Side: Image with Decorative Note */}
                     <div className="relative">
-                        <div className="absolute top-[-20px] left-[-20px] bg-[#f0f9fb] p-4 rounded-3xl shadow-sm z-20">
-                            <FontAwesomeIcon icon="fa-solid fa-music" className="text-[#e45627] text-3xl" />
+                        {/* Background Decorative Blur (Teal) behind image top-left */}
+                        <div className="absolute w-[260px] h-[260px] -top-10 -left-10 bg-[#57bfd033] blur-[90px] rounded-full pointer-events-none z-1" />
+                        <div className="absolute top-[5%] left-[12%] p-4 rounded-3xl z-20">
+                            <img
+                                src="/assets/images/features/Vector-3.png"
+                                alt="Music icon"
+                                className="w-8 h-8"
+                            />
                         </div>
                         <img
-                            src="your-image-path.jpg"
-                            alt="Students"
-                            className="rounded-[40px] shadow-xl w-full object-cover aspect-[4/5]"
+                            src="/assets/images/features/touch-form-img.png"
+                            alt="Students learning music"
+                            className="rounded-[40px] w-3/4 mx-auto object-cover aspect-[4/5]"
                         />
                     </div>
 
