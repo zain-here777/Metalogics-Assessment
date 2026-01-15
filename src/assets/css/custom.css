@@ -13,8 +13,9 @@
   --color-text-light: #656565;
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #f9fafb;
-  
   --color-tagline-bg: #55becf;
+    --breakpoint-xxs: 411px;
+  --breakpoint-1lg: 1100px;
 }
 
 /* ============================================
@@ -23,6 +24,34 @@
    This file is for your custom CSS styles.
    It's imported in main.jsx and processed by Vite.
    ============================================ */
+
+/* Glowing animation for testimonial cards */
+.glowing::before {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: radial-gradient(circle, #DD6741 0%, rgba(221, 103, 65, 0) 100%);
+	width: calc(100% + 5px);
+	height: calc(100% + 5px);
+	z-index: -1;
+	animation: fadeInOut 3s ease-in-out infinite;
+	border-radius: 16px;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0;
+	}
+}
 
 /* Example custom styles */
 /* .static-custom-class {
@@ -100,6 +129,28 @@ code {
   animation: float-down-up 4s ease-in-out infinite;
 }
 
+@keyframes tada {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  10%, 20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.tada-animation {
+  animation: tada 2s ease-in-out infinite;
+}
+
 .btn-primary{
   display: flex;
   justify-content: center;
@@ -120,7 +171,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 21px;
+  padding: 8px 21px;
   gap: 10px;
   font-family: var(--font-bs);
   font-style: normal;
@@ -129,7 +180,7 @@ code {
   line-height: 24px;
   color: #FF7A4E;
   background: white !important;
-  border: 2px solid var(--color-btn-secondary);
+  border: 2px solid #E86034;
   border-radius: 32px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -142,7 +193,7 @@ code {
 }
 .banner-tittle h1{
   @apply
-  font-medium text-[60px] leading-[68px] font-eb-garamond text-text-primary
+  font-medium lg:text-[60px] text-[32px] lg:leading-[68px] leading-[40px] font-eb-garamond text-text-primary
 }
 .banner-tittle span{
   @apply
@@ -150,7 +201,7 @@ code {
 }
 .banner-tittle p{
   @apply
-  font-normal text-[22px] leading-[32px] text-text-light font-source-sans-pro mt-[20px]
+  font-normal text-[22px] leading-[32px] text-text-light font-source-sans-pro mt-[18px]
 }
 .has-effect::after{
   @apply
@@ -164,4 +215,18 @@ code {
   @apply
   content-[''] pointer-events-none absolute w-[300.16px] h-[300.16px] left-[460.33px] top-[-140.36px] bg-[#57bfd069] blur-[200px]
 }
+.banner-pattern span{
+  @apply
+  relative
+}
 
+.banner-pattern span::after{
+  @apply
+  content-[''] absolute max-lg:hidden /* line-2 */ ;
+  position: absolute;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='199' height='17' viewBox='0 0 199 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M148.67 8.61828C131.513 7.61138 55.637 11.9389 39.7881 16.4378C39.7881 16.6521 39.9668 16.6649 40.1844 16.6521C42.007 16.5449 73.2839 13.2977 95.9327 12.196C103.271 11.839 111.282 11.5692 118.834 11.0606C126.387 10.5519 148.67 8.61828 148.67 8.61828Z' fill='%23E45627'/%3E%3Cpath d='M198.237 2.21264C198.237 2.21264 198.395 2.2555 198.197 2.46973C198.091 2.49845 197.682 2.64111 196.652 2.89819C195.146 3.41235 135.137 2.25933 100.45 4.22644L0.483006 9.32525C-0.44133 9.36717 0.245273 8.96107 0.245273 8.96107C13.0789 6.7662 26.2374 4.44071 61.1444 2.83398C85.0762 1.33502 129.615 -0.105569 138.725 0.006096C152.315 0.006096 181.257 1.04825 198.237 2.21264Z' fill='%23E45627'/%3E%3C/svg%3E%0A");
+  width: 198.3px;
+  height: 16.66px;
+  left: -10px;
+  bottom: -5px;
+}

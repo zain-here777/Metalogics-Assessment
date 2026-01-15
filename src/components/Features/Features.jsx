@@ -11,11 +11,11 @@ const Features = () => {
             <img className='object-cover z-1 w-full h-[418px] absolute' src="../assets/images/features/waves.png" alt="" />
             <div className='relative flex-col lg:p-[100px_30px] p-[20px] z-50 xl:container m-auto lg:flex block w-full gap-[45px] justify-between'>
                 <div className='relative'>
-                    <img className='object-contain z-1 float-animation bottom-30 w-auto absolute' src="../assets/images/features/Vector-1.png" alt="" />
-                    <img className='object-contain z-1 float-animation left-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-2.png" alt="" />
-                    <img className='object-contain z-1 float-animation right-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-3.png" alt="" />
-                    <img className='object-contain z-1 float-animation right-[0%] bottom-30 w-auto absolute' src="../assets/images/features/Vector-4.png" alt="" />
-                    <div className="m-auto w-full max-w-[680px] text-center [&_h1]:text-[40px]! [&_h1]:leading-[55px]! [&_p]:text-[20px]! [&_p]:leading-[32px]!">
+                    <img className='object-contain max-lg:hidden z-1 float-animation bottom-30 w-auto absolute' src="../assets/images/features/Vector-1.png" alt="" />
+                    <img className='object-contain max-lg:hidden z-1 float-animation left-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-2.png" alt="" />
+                    <img className='object-contain max-lg:hidden z-1 float-animation right-[20%] top-30 w-auto absolute' src="../assets/images/features/Vector-3.png" alt="" />
+                    <img className='object-contain max-lg:hidden z-1 float-animation right-[0%] bottom-30 w-auto absolute' src="../assets/images/features/Vector-4.png" alt="" />
+                    <div className="m-auto w-full max-w-[680px] text-center [&_h1]:lg:text-[40px]! [&_h1]:text-[30px]! [&_h1]:lg:leading-[55px]! [&_h1]:leading-[40px]! [&_p]:text-[20px]! [&_p]:leading-[32px]! max-lg:mb-[30px]">
                         <span className="tagline mb-[20px]">
                             <FontAwesomeIcon icon="fa-solid fa-music" />
                             What Sets Us Apart
@@ -28,9 +28,9 @@ const Features = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-3 gap-[20px]'>
+                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[20px]'>
                     <div className='rounded-[20px] overflow-hidden'>
-                        <div className='p-[46px_10px] h-[364px]  flex items-center justify-center  bg-[radial-gradient(circle,#F7BCA8_0%,#F7BBA7_1%,#E45627_100%)]'>
+                        <div className='p-[46px_10px] lg:h-[364px] h-auto  flex items-center justify-center  bg-[radial-gradient(circle,#F7BCA8_0%,#F7BBA7_1%,#E45627_100%)]'>
                             <img className='w-full object-cover max-h-[276px]' src="../assets/images/features/blo2-01.png" alt="" />
                         </div>
                         <div className='bg-[#f2fafc] p-[16px_28px]'>
@@ -41,7 +41,7 @@ const Features = () => {
                         </div>
                     </div>
                      <div className='rounded-[20px] overflow-hidden'>
-                        <div className='p-[0_10px] overflow-hidden h-[364px]  flex items-center justify-center  bg-[radial-gradient(circle,#55B5EC_0%,#BBF6FF_100%)]'>
+                        <div className='p-[0_10px] overflow-hidden lg:h-[364px] h-auto  flex items-center justify-center  bg-[radial-gradient(circle,#55B5EC_0%,#BBF6FF_100%)]'>
                             <img className='w-full object-scale-down object-scale-down' src="../assets/images/features/blo2-1.png" alt="" />
                         </div>
                         <div className='bg-[#f2fafc] p-[16px_28px]'>
@@ -52,7 +52,7 @@ const Features = () => {
                         </div>
                     </div>
                      <div className='rounded-[20px] overflow-hidden'>
-                        <div className='p-[0_10px] overflow-hidden h-[364px] flex items-center justify-center bg-gradient-to-r from-[#FFA789] to-[#E45627]'>
+                        <div className='p-[0_10px] overflow-hidden lg:h-[364px] h-auto flex items-center justify-center bg-gradient-to-r from-[#FFA789] to-[#E45627]'>
                             <img className='w-[281px] h-[277px] object-cover ' src="../assets/images/features/blo2-3.png" alt="" />
                         </div>
                         <div className='bg-[#f2fafc] p-[16px_28px]'>

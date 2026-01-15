@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Banner from '../../components/Banner';
 import Features from '../../components/Features';
 import Community from '../../components/Community';
+import Pricing from '../../components/Pricing';
+import Testimonial from '../../components/Testimonial';
 /**
  * Main Layout Component
  * Container for all landing page sections
@@ -15,6 +17,8 @@ const Main = ({ sections = [] }) => {
         <Banner />
         <Features/>
         <Community/>
+        <Pricing />
+        <Testimonial />
     </main>
   );
 };

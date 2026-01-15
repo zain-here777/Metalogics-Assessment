@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="lg:hidden">
+        <div className="lg:hidden absolute w-full left-0">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
             <a
               href="#home"
@@ -98,18 +98,23 @@ const Navbar = () => {
               className="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Services
+              PRICING
             </a>
             <a
               href="#contact"
               className="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              GALLERY
             </a>
-            <button className="w-full mt-2 bg-primary-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-primary-700 transition-colors">
-              Get Started
-            </button>
+            <a
+              href="#contact"
+              className="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Student Login
+            </a>
+            
           </div>
         </div>
       )}
