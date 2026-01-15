@@ -10,7 +10,7 @@ const Community = () => {
         <div className="bg-white lg:p-[82px_0] p-[20px] relative has-blueeffect has-effect overflow-hidden">
             <div className="relative has-blueeffect">
                 <img class="max-w-[402px] h-[402px] max-lg:hidden object-cover absolute bottom-0 right-0 z-[-1]" alt="" src="/src/assets/images/banner-image.png"></img>
-                <div className='xl:container px-[20px] 1lg:gap-[110px] gap-[80px]  m-auto flex max-lg:flex-col'>
+                <div className='xl:container lg:px-[20px] 1lg:gap-[110px] gap-[80px]  m-auto flex max-lg:flex-col'>
                     <div className='flex-1 flex justify-center items-center z-[1] max-xxs:scale-[0.7]'>
                         <div className='relative'>
                             <img className="object-cover tada-animation z-[1] rounded-[10px] left-0 bottom-0 absolute max-lg:w-[250px]" alt="" src="../assets/images/features/img-03.png"></img>

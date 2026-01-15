@@ -107,7 +107,7 @@ const Testimonial = () => {
 
 	return (
 		<div className="bg-white lg:p-[82px_0] p-[20px] relative has-blueeffect has-effect overflow-hidden">
-			<div className="xl:container lg:px-[20px] mx-auto">
+			<div className="xl:container lg:lg:px-[20px] mx-auto">
 				<div className="text-center max-w-[680px] mx-auto [&_h1]:lg:text-[40px]! [&_h1]:text-[30px]! [&_h1]:lg:leading-[55px]! [&_h1]:leading-[40px]! [&_p]:text-[20px]! [&_p]:leading-[32px]!">
 					<span className="tagline mb-[20px]">
 						<FontAwesomeIcon icon="fa-solid fa-music" />

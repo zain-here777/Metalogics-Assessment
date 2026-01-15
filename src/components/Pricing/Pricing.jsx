@@ -25,7 +25,7 @@ const Pricing = () => {
   return (
     <div className="bg-white lg:p-[82px_0] p-[20px] relative overflow-hidden">
             <div className="relative">
-                 <div className='xl:container px-[20px] 1lg:gap-[110px] gap-[80px]  m-auto flex max-lg:flex-col'>
+                 <div className='xl:container lg:px-[20px] 1lg:gap-[110px] gap-[80px]  m-auto flex max-lg:flex-col'>
                     <div className='flex-1 self-center'>
                         <div className="m-auto w-full max-w-[680px] [&_h1]:lg:text-[40px]! [&_h1]:text-[30px]! [&_h1]:lg:leading-[55px]! [&_h1]:leading-[40px]! [&_p]:text-[20px]! [&_p]:leading-[32px]! max-lg:mb-[30px]">
                             <span className="tagline mb-[20px]">
