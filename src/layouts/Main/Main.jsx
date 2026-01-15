@@ -5,6 +5,7 @@ import Features from '../../components/Features';
 import Community from '../../components/Community';
 import Pricing from '../../components/Pricing';
 import Testimonial from '../../components/Testimonial';
+import TouchForm from '../../components/TouchForm';
 /**
  * Main Layout Component
  * Container for all landing page sections
@@ -19,6 +20,7 @@ const Main = ({ sections = [] }) => {
         <Community/>
         <Pricing />
         <Testimonial />
+        <TouchForm />
     </main>
   );
 };
